@@ -19,7 +19,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-/* ------------------- OBTENER CARRITO POR ID ------------------- */
 router.get("/:cid", async (req, res) => {
   try {
     const { cid } = req.params;
@@ -36,7 +35,7 @@ router.get("/:cid", async (req, res) => {
   }
 });
 
-/* ------------------- AGREGAR PRODUCTO AL CARRITO ------------------- */
+/* ------- AGREGAR PRODUCTO AL CARRITO ---------------- */
 router.post("/:cid/product/:pid", async (req, res) => {
   try {
     const { cid, pid } = req.params;

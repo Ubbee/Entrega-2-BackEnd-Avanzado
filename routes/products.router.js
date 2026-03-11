@@ -18,7 +18,7 @@ const validateProductBody = (body) => {
     return true;
 };
 
-/* ------------------- GET TODOS ------------------- */
+/* ------------------- GET TODOS --------------- */
 router.get("/", async (req, res) => {
     try {
         const products = await productManager.getProducts();
@@ -42,7 +42,7 @@ router.get("/:pid", async (req, res) => {
     }
 });
 
-/* ------------------- CREAR ------------------- */
+/* ----------------- CREAR ----------------- */
 router.post("/", async (req, res) => {
     try {
         if (!validateProductBody(req.body)) {
@@ -78,7 +78,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-/* ------------------- ACTUALIZAR ------------------- */
+/* --------------------- ACTUALIZAR ------------------- */
 router.put("/:pid", async (req, res) => {
     try {
         const { pid } = req.params;
@@ -96,7 +96,7 @@ router.put("/:pid", async (req, res) => {
     }
 });
 
-/* ------------------- ELIMINAR ------------------- */
+/* ------------------- ELIMINAR -------------------------- */
 router.delete("/:pid", async (req, res) => {
     try {
         const { pid } = req.params;
